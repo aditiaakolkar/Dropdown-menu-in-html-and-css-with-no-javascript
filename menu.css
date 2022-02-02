@@ -1,0 +1,132 @@
+/*Reset Style*/
+ul, ol {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.container {
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+ul {
+    background: #2196f3;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    color: #fff;
+    display: block;
+    position: relative;
+    padding: 1rem 2.2rem;
+    min-width: 12rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+li a {
+    color: #fff;
+}
+
+li:hover {
+    background: #3f51b5;
+    cursor: pointer;
+}
+
+li:hover a+i:not(.dropdown li a+i) {
+    transform: rotate(180deg);
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-top: 2.4rem;
+    left: 0;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    display: none;
+}
+
+ul li ul.dropdown li:hover a+i:not(.right li a+i) {
+    transform: rotate(-90deg);
+}
+
+ul li:hover>ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li ul.right {
+    position: absolute;
+    right: -12rem;
+    left: auto;
+    top: 0;
+    margin: 0;
+}
+
+ul li ul li ul.last-right {
+    position: absolute;
+    right: -12rem;
+    left: auto;
+    top: 0;
+    margin: 0;
+}
+
+ul li ul.right li:hover {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+
+ul li ul.right li:hover a+i {
+    transform: rotate(-90deg);
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+/* Icon */
+.dropdown-menu>li>a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
