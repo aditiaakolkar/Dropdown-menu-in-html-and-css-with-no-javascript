@@ -69,6 +69,12 @@ li:hover a+i:not(.dropdown li a+i) {
     transform: rotate(180deg);
 }
 
+li a+i {
+    font-size: 14px;
+    display: flex !important;
+    align-self: center;
+}
+
 ul li ul {
     visibility: hidden;
     opacity: 0;
